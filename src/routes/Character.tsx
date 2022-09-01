@@ -1,8 +1,12 @@
 import React from "react";
-import ICharacter from "../types/characters";
-import { useNavigate } from "react-router-dom";
+import {ICharacter} from "../types/characters";
+import { generatePath, useNavigate } from "react-router-dom";
 
-const Character = (props: ICharacter) => {
+interface ICharacterProps {
+  character: ICharacter 
+}
+
+const Character = (props: ICharacterProps) => {
   const navigate = useNavigate()
 
   const {
@@ -18,15 +22,25 @@ const Character = (props: ICharacter) => {
     episode,
     url,
     created,
-  } = props;
+  } = props.character;
+
+  const charEp = episode ? episode.map((ep) => <li>{ep.slice(32)}</li>) : ""
 
   return (
-    <div>
-      <button onClick={() => navigate("/characters")}>Return</button>
+    <div className="CharacterCard">
+      <button className="Std-btn" onClick={() => navigate(-1)}>Return</button>
       <div className="Character">
-        <h2>{name}</h2>
-        <h3>{status}</h3>
         <img src={image} alt={name} />
+        <div className="CharDescription">
+          <h2>Name: {name}</h2>
+          <p>Status: {status}</p>
+          <p>Species: {species}</p>
+          <p>{type? "Type: " + type: ""}</p>
+          <p>Genre: {gender === 'Male' ? "👨🏻" : gender === "Female" ? "👩🏻" : "☢"}</p>
+          <p>Origin: {origin.name} Location: {location.name}</p>
+          <ul>{charEp}</ul>
+        </div>
+        
       </div>
     </div>
   );

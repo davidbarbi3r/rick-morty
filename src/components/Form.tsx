@@ -9,7 +9,7 @@ interface IProps {
 
 const Form = (props: IProps) => {
   return (
-      <form onSubmit={props.handleSubmit}>
+      <form onSubmit={props.handleSubmit} className="Form">
           <input
               type="text"
               value={props.formData.name}
@@ -24,7 +24,7 @@ const Form = (props: IProps) => {
               <option value="dead">Dead</option>
               <option value="unknown">Unknown</option>
           </select>
-          <button>Search</button>
+          <button className="Std-btn">Search</button>
       </form>
   )
 }

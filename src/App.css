@@ -23,6 +23,30 @@
 .Container button {
   padding: 0.3em;
   margin: 0.4em;
+  font-weight: bold;
+}
+
+.Std-btn {
+  margin: 1em;
+  background-color: rgb(162, 224, 221);
+  padding: 0.5em 2em;
+  border-radius: 10px;
+}
+
+.Form input {
+  margin: 1em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+}
+
+.Form select {
+  margin: 1em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+}
+
+.Std-btn:hover {
+  border: 1px solid black;
 }
 
 img {
@@ -34,37 +58,29 @@ img {
   display: flex;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Pages button {
+  margin: 1em;
+  padding: 0.5em 2em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Pages h3 {
+  margin: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.Character {
+  background-color: azure;
+  display: flex;
+  padding: 1em;
+  border-radius: 10px;
 }
 
-.card {
-  padding: 2em;
+.Character img {
+  max-width: 400px;
 }
 
-.read-the-docs {
-  color: #888;
+.CharDescription {
+  text-align: left;
+  margin-left: 1em;
 }
+
+
