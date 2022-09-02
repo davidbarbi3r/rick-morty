@@ -1,4 +1,4 @@
-import ICharacter from '../types/characters'
+import {ICharacter} from '../types/characters'
 
 interface ICharacterCard {
     char: ICharacter
