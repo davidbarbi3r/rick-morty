@@ -106,7 +106,7 @@ function App() {
 
       <Routes>
         <Route
-          path="/characters/*"
+          path="/characters"
           element={
             <Characters
               characters={characters.results}
