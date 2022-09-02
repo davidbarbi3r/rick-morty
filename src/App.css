@@ -68,7 +68,8 @@ img {
 }
 
 .Character {
-  background-color: azure;
+  background-color: rgb(73, 138, 138);
+  color: white;
   display: flex;
   padding: 1em;
   border-radius: 10px;
@@ -83,4 +84,27 @@ img {
   margin-left: 1em;
 }
 
+.Character .Episodes {
+  text-overflow: ellipsis;
+  max-width: 400px;
+  text-align: left;
+}
 
+@media (max-width: 750px){
+  
+  .Title {
+    font-size: 2rem;
+  }
+
+  .Character {
+    display: block;
+  }
+  .Character img {
+    height: 250px;
+    max-width: 300px;
+  }
+
+  .CharatersImg{
+    max-width: 300px;
+  }
+}

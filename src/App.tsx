@@ -102,7 +102,7 @@ function App() {
 
   return (
     <>
-      <h1>Rick & Morty</h1>
+      <h1 className="Title">Rick & Morty</h1>
 
       <Routes>
         <Route

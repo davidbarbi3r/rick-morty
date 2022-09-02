@@ -1,6 +1,6 @@
 import React from "react";
 import {ICharacter} from "../types/characters";
-import { generatePath, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface ICharacterProps {
   character: ICharacter 
@@ -20,11 +20,9 @@ const Character = (props: ICharacterProps) => {
     location,
     image,
     episode,
-    url,
-    created,
   } = props.character;
 
-  const charEp = episode ? episode.map((ep) => <li>{ep.slice(32)}</li>) : ""
+  const charEp = episode ? episode.map((ep) => <span>{ep.slice(40)}, </span>) : ""
 
   return (
     <div className="CharacterCard">
@@ -38,7 +36,7 @@ const Character = (props: ICharacterProps) => {
           <p>{type? "Type: " + type: ""}</p>
           <p>Genre: {gender === 'Male' ? "👨🏻" : gender === "Female" ? "👩🏻" : "☢"}</p>
           <p>Origin: {origin.name} Location: {location.name}</p>
-          <ul>{charEp}</ul>
+          <p className="Episodes">Episode(s): {charEp}</p>
         </div>
         
       </div>

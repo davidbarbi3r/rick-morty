@@ -10,7 +10,7 @@ const CharacterCard = (props: ICharacterCard) => {
   
     return (
     <button key={id} onClick={() => props.getCharacter(id)}>
-          <img src={image} alt={name}></img>
+          <img src={image} alt={name} className="CharatersImg"></img>
           <div>{name}</div>
         </button>
   )
